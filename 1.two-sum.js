@@ -38,6 +38,7 @@
  */
 {
 	//暴力破解
+	//O(n2)
 	let twoSum = function (nums, target) {
 		for (let i = 0; i < nums.length; i++) {
 			for (let j = i + 1; j < nums.length; j++) {
