@@ -34,8 +34,8 @@
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
+ *     this.val = val
+ *     this.next = null
  * }
  */
 /**
@@ -43,27 +43,27 @@
  * @param {ListNode} l2
  * @return {ListNode}
  */
-var addTwoNumbers = function(l1, l2) {
-	var sum;
-	var carry = 0;
-	var lists = new ListNode();
-	var result = lists;
-	while(l1||l2||carry>0){
+let addTwoNumbers = function(l1, l2) {
+	let sum
+	let carry = 0
+	let lists = new ListNode()
+	let result = lists
+	while(l1 || l2 || carry>0){
 		sum = 0
-		if(l1!==null){
-			sum += l1.val;
-			l1 = l1.next;
+		if(l1 !== null){
+			sum += l1.val
+			l1 = l1.next
 		}
-		if(l2!==null){
-			sum +=l2.val;
-			l2 = l2.next;
+		if(l2 !== null){
+			sum +=l2.val
+			l2 = l2.next
 		}
-		sum+=carry;
-		carry=sum>=10?1:0;
-		lists.val = sum%10;
-		lists.next =(l2==null&&l1==null&&carry===0)?null:new ListNode();
-		lists = (l2==null&&l1==null&&carry===0)?null:lists.next;
+		sum += carry
+		carry = sum >= 10 ? 1 : 0
+		lists.val = sum % 10
+		lists.next = (l2 == null && l1 == null && carry === 0) ? null : new ListNode()
+		lists = (l2 == null && l1 == null && carry === 0) ? null : lists.next
 	}
-	return result;
-};
+	return result
+}
 // @lc code=end

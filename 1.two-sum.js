@@ -46,7 +46,7 @@
 			}
 		}
 	};
-	}
+}
 {
 	//Hash表
 	let twoSum = function (nums, target) {
