@@ -53,7 +53,6 @@ let reverse = function(x) {
     if (x > -10 && x < 10) return x
     let resultString = x >= 0 ? '' : '-'
     let number = Math.abs(x)
-    let index = 0
     while (number >= 1){
         resultString += number % 10
         number -= number % 10
